@@ -9,6 +9,8 @@ import Home from "@/pages/Home";
 import Rooms from "@/pages/Rooms";
 import Banquet from "@/pages/Banquet";
 import Dining from "@/pages/Dining";
+import Menus from "@/pages/Menus";
+import Offers from "@/pages/Offers";
 import ClubLaFair from "@/pages/ClubLaFair";
 import Gallery from "@/pages/Gallery";
 import Contact from "@/pages/Contact";
@@ -16,6 +18,7 @@ import NotFound from "@/pages/NotFound";
 import { pageTransition } from "@/lib/anim";
 import "@/styles/home.css";
 import "@/styles/pages.css";
+import "@/styles/menus.css";
 
 const Page = ({ children }) => (
   <motion.main {...pageTransition}>{children}</motion.main>
@@ -36,6 +39,8 @@ const AnimatedRoutes = () => {
         <Route path="/rooms" element={<Page><Rooms /></Page>} />
         <Route path="/banquet" element={<Page><Banquet /></Page>} />
         <Route path="/dining" element={<Page><Dining /></Page>} />
+        <Route path="/menus" element={<Page><Menus /></Page>} />
+        <Route path="/offers" element={<Page><Offers /></Page>} />
         <Route path="/club-lafair" element={<Page><ClubLaFair /></Page>} />
         <Route path="/gallery" element={<Page><Gallery /></Page>} />
         <Route path="/contact" element={<Page><Contact /></Page>} />

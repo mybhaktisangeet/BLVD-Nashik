@@ -28,6 +28,9 @@ export const DiningShowcase = () => (
               <Link to="/dining" className="text-link" data-testid={`dining-card-link-${d.id}`}>
                 Explore <ArrowRight size={14} />
               </Link>
+              <Link to={`/menus?venue=${d.id}`} className="text-link" style={{ marginLeft: "1.4rem" }} data-testid={`dining-card-menu-${d.id}`}>
+                Menu <ArrowRight size={14} />
+              </Link>
             </div>
           </Reveal>
         ))}

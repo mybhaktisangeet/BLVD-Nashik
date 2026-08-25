@@ -4,6 +4,7 @@ import HeroSection from "@/components/home/HeroSection";
 import Marquee from "@/components/Marquee";
 import { ExperiencePillars, RoomsTeaser, BanquetTeaser } from "@/components/home/Sections";
 import { DiningShowcase, ClubTeaser, GalleryTeaser } from "@/components/home/Showcase";
+import OffersTeaser from "@/components/home/OffersTeaser";
 import { Testimonials, LocationMap, ContactCTA } from "@/components/home/Closing";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <BanquetTeaser />
       <DiningShowcase />
       <ClubTeaser />
+      <OffersTeaser />
       <GoldDivider />
       <GalleryTeaser />
       <Testimonials />

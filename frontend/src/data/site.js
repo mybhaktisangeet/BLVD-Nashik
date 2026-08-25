@@ -48,7 +48,9 @@ export const NAV_LINKS = [
   { label: "Rooms", to: "/rooms" },
   { label: "Banquet & Lawn", to: "/banquet" },
   { label: "Dining", to: "/dining" },
+  { label: "Menus", to: "/menus" },
   { label: "Club LaFair", to: "/club-lafair" },
+  { label: "Offers", to: "/offers" },
   { label: "Gallery", to: "/gallery" },
   { label: "Contact", to: "/contact" },
 ];

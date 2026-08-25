@@ -9,6 +9,8 @@ const quickLinks = [
   { label: "Rooms", to: "/rooms" },
   { label: "Banquet & Lawn", to: "/banquet" },
   { label: "Dining", to: "/dining" },
+  { label: "Menus", to: "/menus" },
+  { label: "Offers", to: "/offers" },
   { label: "Club LaFair", to: "/club-lafair" },
   { label: "Gallery", to: "/gallery" },
   { label: "Contact", to: "/contact" },
@@ -96,7 +98,7 @@ export const Footer = () => (
     <div className="footer__bottom">
       <div className="container container--wide footer__bottom-inner">
         <div className="footer__copy">
-          <span>© 2024 BLVD Nashik — Aures Hospitality Group. All Rights Reserved.</span>
+          <span>© {new Date().getFullYear()} BLVD Nashik — Aures Hospitality Group. All Rights Reserved.</span>
           <span className="footer__secure" data-testid="footer-secured-badge">
             <ShieldCheck size={14} /> Secured
           </span>

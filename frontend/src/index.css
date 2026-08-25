@@ -214,10 +214,10 @@ button { font-family: inherit; cursor: pointer; }
 .nav__logo { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
 .nav__logo-main { font-family: var(--font-display); font-weight: 600; font-size: 1.75rem; letter-spacing: 0.22em; color: var(--ivory-50); }
 .nav__logo-sub { font-family: var(--font-nav); font-weight: 300; font-size: 0.58rem; letter-spacing: 0.52em; color: var(--gold-500); margin-top: 4px; text-transform: uppercase; }
-.nav__links { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2rem); }
+.nav__links { display: flex; align-items: center; gap: clamp(0.85rem, 1.4vw, 1.6rem); }
 .nav__link {
-  font-family: var(--font-nav); font-weight: 400; font-size: 0.78rem;
-  letter-spacing: var(--tracking-widest); text-transform: uppercase;
+  font-family: var(--font-nav); font-weight: 400; font-size: 0.74rem;
+  letter-spacing: var(--tracking-wider); text-transform: uppercase;
   color: var(--ivory-200); position: relative; padding: 6px 0;
   transition: color var(--transition-fast);
 }
@@ -234,7 +234,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .nav__burger:hover { background: rgba(201,169,110,0.1); }
 
-@media (max-width: 1180px) {
+@media (max-width: 1320px) {
   .nav__links, .nav__book { display: none; }
   .nav__burger { display: inline-flex; }
 }
@@ -247,8 +247,8 @@ button { font-family: inherit; cursor: pointer; }
   display: flex; flex-direction: column; justify-content: center; padding: 6rem clamp(2rem, 8vw, 5rem) 3rem;
 }
 .mobile-menu__link {
-  font-family: var(--font-display); font-size: clamp(2rem, 7vw, 3rem); font-weight: 500;
-  color: var(--ivory-100); padding: 0.45rem 0; display: flex; align-items: baseline; gap: 1rem;
+  font-family: var(--font-display); font-size: clamp(1.7rem, 5.5vw, 2.6rem); font-weight: 500;
+  color: var(--ivory-100); padding: 0.35rem 0; display: flex; align-items: baseline; gap: 1rem;
   transition: color var(--transition-fast);
 }
 .mobile-menu__link:hover, .mobile-menu__link--active { color: var(--gold-400); }

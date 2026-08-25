@@ -37,7 +37,10 @@ export default function Dining() {
                     <li key={h}><Check size={14} /> {h}</li>
                   ))}
                 </ul>
-                <CTAButton href={`tel:${CONTACT.phoneGeneral.replace(/\s/g, "")}`} variant="ghost" testId={`reserve-table-${d.id}`}>Reserve a Table</CTAButton>
+                <div className="offer-card__ctas">
+                  <CTAButton to={`/menus?venue=${d.id}`} variant="gold" testId={`view-menu-${d.id}`}>View Menu</CTAButton>
+                  <CTAButton href={`tel:${CONTACT.phoneGeneral.replace(/\s/g, "")}`} variant="ghost" testId={`reserve-table-${d.id}`}>Reserve a Table</CTAButton>
+                </div>
               </Reveal>
             </article>
           ))}
