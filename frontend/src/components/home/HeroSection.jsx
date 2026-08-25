@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 import { IMG, CONTACT } from "@/data/site";
 import { CTAButton } from "@/components/Shared";
 import { EASE } from "@/lib/anim";
@@ -83,6 +84,16 @@ export const HeroSection = () => {
           <CTAButton href={CONTACT.booking} variant="ghost" testId="hero-book-btn">
             Book Your Stay
           </CTAButton>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.6 }}
+          style={{ marginTop: "1.6rem" }}
+        >
+          <Link to="/tour" className="text-link" data-testid="hero-tour-link">
+            Take the Virtual Tour <ArrowRight size={14} />
+          </Link>
         </motion.div>
       </div>
       <motion.div

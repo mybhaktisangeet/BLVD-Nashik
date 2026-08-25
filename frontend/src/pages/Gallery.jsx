@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import Lightbox from "@/components/Lightbox";
-import { usePageMeta, SectionHead } from "@/components/Shared";
+import { usePageMeta, SectionHead, CTAButton } from "@/components/Shared";
 import { IMG, GALLERY, GALLERY_CATS } from "@/data/site";
 
 export default function Gallery() {
@@ -66,6 +66,11 @@ export default function Gallery() {
           <Lightbox images={filtered} index={lightbox} onClose={() => setLightbox(null)} onNavigate={setLightbox} />
         )}
       </AnimatePresence>
+
+      <div className="tour-invite" data-testid="gallery-tour-invite">
+        <p>Prefer a guided walkthrough?</p>
+        <CTAButton to="/tour" variant="ghost" testId="gallery-tour-cta">Take the Virtual Tour</CTAButton>
+      </div>
     </>
   );
 }

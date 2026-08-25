@@ -14,7 +14,7 @@ export const OffersTeaser = () => (
         sub="Wine-country weekends, royal weddings, and celebration staycations — composed end-to-end, one enquiry away."
       />
       <div className="offers-teaser__grid">
-        {OFFERS.filter((o) => o.featured).map((o, i) => (
+        {OFFERS.filter((o) => o.featured).slice(0, 3).map((o, i) => (
           <Reveal key={o.id} delay={i * 0.12} y={40} className="offer-mini" data-testid={`offer-mini-${o.id}`}>
             <Link to="/offers" aria-label={`View offer — ${o.name}`}>
               <div className="offer-mini__img">

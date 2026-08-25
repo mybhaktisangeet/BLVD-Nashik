@@ -5,9 +5,26 @@ const CDN = "https://static.prod-images.emergentagent.com/jobs/8e94824b-eb2c-43d
 export const OFFER_IMG = {
   vineyard: `${CDN}/7175d8e0b5e35ae14ee2d7e5aee61d3edd146dd0273de77a949efa356ec07418.jpeg`,
   celebrationSuite: `${CDN}/526e4e6a757c9ee9145686b154a8f3dd9cad231e1676546e9a4253650b4d66b5.jpeg`,
+  monsoon: `${CDN}/871a155bef54b2aa764720bfd97156d0b76f81202e3ec18df0e52077a8c46c0a.jpeg`,
 };
 
 export const OFFERS = [
+  {
+    id: "monsoon-staycation",
+    tag: "Now On — Monsoon",
+    name: "Monsoon Staycation",
+    image: OFFER_IMG.monsoon,
+    featured: true,
+    description:
+      "Nashik turns emerald in the rains. Watch the mist roll over the hills from your window seat — chai in hand, spa warm and waiting, and the jacuzzi bubbling while it pours outside.",
+    inclusions: [
+      "Suite stay with misty hill views",
+      "Monsoon high-tea — pakoras & chai by the window",
+      "Warm jacuzzi, steam & sauna access at Club LaFair",
+      "Movie evening at the private cinema",
+      "Flexible late checkout on rainy mornings",
+    ],
+  },
   {
     id: "wine-country-weekend",
     tag: "Seasonal Favourite",

@@ -12,6 +12,7 @@ const quickLinks = [
   { label: "Menus", to: "/menus" },
   { label: "Offers", to: "/offers" },
   { label: "Experiences", to: "/experiences" },
+  { label: "Virtual Tour", to: "/tour" },
   { label: "Club LaFair", to: "/club-lafair" },
   { label: "Gallery", to: "/gallery" },
   { label: "Contact", to: "/contact" },
