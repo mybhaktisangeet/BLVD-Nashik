@@ -46,11 +46,12 @@ export const CONTACT = {
 export const NAV_LINKS = [
   { label: "Home", to: "/" },
   { label: "Rooms", to: "/rooms" },
-  { label: "Banquet & Lawn", to: "/banquet" },
+  { label: "Banquets", to: "/banquet" },
   { label: "Dining", to: "/dining" },
   { label: "Menus", to: "/menus" },
-  { label: "Club LaFair", to: "/club-lafair" },
   { label: "Offers", to: "/offers" },
+  { label: "Experiences", to: "/experiences" },
+  { label: "Club LaFair", to: "/club-lafair" },
   { label: "Gallery", to: "/gallery" },
   { label: "Contact", to: "/contact" },
 ];

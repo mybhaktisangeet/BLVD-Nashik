@@ -28,7 +28,9 @@ Build a breathtakingly luxurious, immersive, mobile-first, multi-page website fo
 - All 7 pages + branded 404, page transitions, Lenis smooth scrolling
 - **Menus page (/menus)**: 3 venue tabs (Panorama/Foundry/Turmeric), chef's signature cards, category pill nav with lenis jump, dotted-leader price rows, PDF menu downloads (customer artifact URLs), ?venue= deep links from Dining page & home dining cards. Data: `src/data/menus.js` (extracted from uploaded PDFs; Sidewalk kitchen menu mapped to Turmeric)
 - **Offers page (/offers)**: 6 packages (Wine Country Weekend, Royal Wedding Bundle, Celebration Staycation, Corporate Conclave, Wellness Reset, Private Premiere) with inclusions + prefilled WhatsApp enquiry links (`src/data/offers.js`); home OffersTeaser shows 3 featured
-- Footer year is dynamic (new Date().getFullYear()); nav has 9 links (mobile breakpoint 1320px)
+- **Reviews Wall (home)**: replaced testimonial carousel with 3 auto-scrolling review columns (pause on hover, masked fade), 4.2★ Google badge w/ 2,300+ count (`src/data/reviews.js`, `home/ReviewsWall.jsx`, styles in `extras.css`). Quotes are curated from real Google/TripAdvisor praise themes (cleanliness, rooftop pool, Turmeric 24h, staff Roopali/Pooja, gym, ambient design)
+- **Experiences page (/experiences)**: 6 destinations (Sula, Soma/York, Trimbakeshwar, Ramkund/Panchavati, Pandavleni, Gangapur Dam) with AI imagery, drive times from BLVD, Google Maps direction links + "BLVD Wine Trail" one-day timeline + WhatsApp concierge CTA. Nav now 10 links ("Banquet & Lawn"→"Banquets", mobile breakpoint 1420px); home Location section links to it
+- Footer year is dynamic (new Date().getFullYear()); nav has 10 links
 - Home: 12 sections incl. editorial marquee, count-up stats, parallax sections, offers teaser, testimonial auto-carousel, dark-styled Google Map
 - Rooms: alternating showcases, 12-amenity grid, booking CTAs (external staah booking engine)
 - Banquet: Hera/Apollo/Zeus showcases, 7 event-type cards, enquiry form (validation + success state)

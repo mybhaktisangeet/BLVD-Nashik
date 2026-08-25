@@ -234,7 +234,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .nav__burger:hover { background: rgba(201,169,110,0.1); }
 
-@media (max-width: 1320px) {
+@media (max-width: 1420px) {
   .nav__links, .nav__book { display: none; }
   .nav__burger { display: inline-flex; }
 }

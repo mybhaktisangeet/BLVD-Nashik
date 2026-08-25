@@ -5,7 +5,8 @@ import Marquee from "@/components/Marquee";
 import { ExperiencePillars, RoomsTeaser, BanquetTeaser } from "@/components/home/Sections";
 import { DiningShowcase, ClubTeaser, GalleryTeaser } from "@/components/home/Showcase";
 import OffersTeaser from "@/components/home/OffersTeaser";
-import { Testimonials, LocationMap, ContactCTA } from "@/components/home/Closing";
+import { LocationMap, ContactCTA } from "@/components/home/Closing";
+import ReviewsWall from "@/components/home/ReviewsWall";
 
 export default function Home() {
   usePageMeta(
@@ -25,7 +26,7 @@ export default function Home() {
       <OffersTeaser />
       <GoldDivider />
       <GalleryTeaser />
-      <Testimonials />
+      <ReviewsWall />
       <LocationMap />
       <ContactCTA />
     </>

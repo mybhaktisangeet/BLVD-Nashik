@@ -1,59 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Quote, Star, MapPin, Phone, Mail } from "lucide-react";
-import { TESTIMONIALS, CONTACT, DISTANCES } from "@/data/site";
+import React from "react";
+import { Link } from "react-router-dom";
+import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import { CONTACT, DISTANCES } from "@/data/site";
 import { SectionHead, CTAButton, Reveal } from "@/components/Shared";
-
-export const Testimonials = () => {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const t = setInterval(() => setIndex((i) => (i + 1) % TESTIMONIALS.length), 6000);
-    return () => clearInterval(t);
-  }, []);
-
-  const item = TESTIMONIALS[index];
-
-  return (
-    <section className="section testimonials" data-testid="testimonials-section">
-      <div className="container">
-        <SectionHead center label="Guest Stories" title={`Voices of <em>BLVD</em>`} />
-        <AnimatePresence mode="wait">
-          <motion.blockquote
-            key={index}
-            className="testimonial"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -24 }}
-            transition={{ duration: 0.6 }}
-            data-testid="testimonial-active"
-          >
-            <Quote size={44} strokeWidth={1} className="testimonial__quote-icon" />
-            <div className="testimonial__stars">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} size={14} fill="currentColor" />
-              ))}
-            </div>
-            <p className="testimonial__text">"{item.quote}"</p>
-            <cite className="testimonial__name">{item.name}</cite>
-            <span className="testimonial__type">{item.type}</span>
-          </motion.blockquote>
-        </AnimatePresence>
-        <div className="testimonial__dots">
-          {TESTIMONIALS.map((_, i) => (
-            <button
-              key={i}
-              className={`testimonial__dot ${i === index ? "testimonial__dot--active" : ""}`}
-              onClick={() => setIndex(i)}
-              aria-label={`Show testimonial ${i + 1}`}
-              data-testid={`testimonial-dot-${i}`}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
 
 export const LocationMap = () => (
   <section className="section" data-testid="location-section">
@@ -83,7 +32,12 @@ export const LocationMap = () => (
               </li>
             ))}
           </ul>
-          <CTAButton href={CONTACT.mapsLink} variant="ghost" testId="get-directions-btn">Get Directions</CTAButton>
+          <div style={{ display: "flex", gap: "1.6rem", alignItems: "center", flexWrap: "wrap" }}>
+            <CTAButton href={CONTACT.mapsLink} variant="ghost" testId="get-directions-btn">Get Directions</CTAButton>
+            <Link to="/experiences" className="text-link" data-testid="location-experiences-link">
+              Explore Nashik Experiences <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
