@@ -1,0 +1,51 @@
+# PRD — BLVD Nashik Luxury Hotel Website
+
+## Original Problem Statement
+Build a breathtakingly luxurious, immersive, mobile-first, multi-page website for BLVD Nashik — a premium boutique hotel & lifestyle destination on Trimbak Road, Satpur, Nashik (Aures Hospitality Group). Complete rebuild replacing a basic Wix template. Design concept: "Midnight Luxe" — deep midnight/charcoal backgrounds, champagne gold accents, warm ivory text, rose-gold highlights. Award-worthy (Awwwards-level) motion and craft. Purely static frontend (no backend/CMS).
+
+## User Choices
+- Existing React (CRA) setup instead of Vite (functionally identical)
+- Forms show elegant success confirmation (static/demo behavior — NO backend submission)
+- All ~22 images AI-generated
+
+## Architecture
+- **Frontend only**: React 19 (CRA + craco), React Router v7, Framer Motion 11, Lenis smooth scroll, Lucide icons, vanilla CSS design tokens (no Tailwind usage in components)
+- Backend (FastAPI/Mongo) untouched — site is purely static
+- Fonts: Cormorant Garamond (display), Playfair Display (accent), Inter (body), Outfit (nav/UI)
+- Images: 22 AI-generated cinematic photos hosted on emergent CDN, referenced in `src/data/site.js`
+
+## Key Files
+- `src/data/site.js` — ALL content: images, contact, rooms, venues, dining, club, testimonials, gallery, hours, distances
+- `src/index.css` — full "Midnight Luxe" design token system + shared components (nav, footer, buttons, forms, lightbox, marquee)
+- `src/styles/home.css`, `src/styles/pages.css` — section styles
+- `src/components/Shared.jsx` — SectionHead, ImageReveal (clip-path wipe), Reveal, AnimatedCounter, CTAButton, GoldDivider, WhatsAppIcon, usePageMeta
+- `src/components/` — Navbar (glass on scroll + full-screen mobile menu), Footer (mandatory credits: Dragosaurabh / Ready2UP / Secured badge), PageHero (parallax), FloatingButtons (WhatsApp + scroll-top), Lightbox, Marquee
+- `src/components/home/` — HeroSection (Ken Burns + particles + masked line reveal), Sections (pillars, rooms teaser, banquet parallax + counters), Showcase (dining scroll, club teaser, gallery masonry), Closing (testimonials carousel, map, gold CTA)
+- `src/pages/` — Home, Rooms, Banquet, Dining, ClubLaFair, Gallery, Contact, NotFound
+- `public/index.html` — SEO meta, OG tags, JSON-LD Hotel schema, fonts; `public/favicon.svg` — gold B monogram
+
+## What's Implemented (June 2026)
+- All 7 pages + branded 404, page transitions, Lenis smooth scrolling
+- Home: 11 sections incl. editorial marquee, count-up stats, parallax sections, testimonial auto-carousel, dark-styled Google Map
+- Rooms: alternating showcases, 12-amenity grid, booking CTAs (external staah booking engine)
+- Banquet: Hera/Apollo/Zeus showcases, 7 event-type cards, enquiry form (validation + success state)
+- Dining: 3 venue showcases + entertainment (cinema/golf/games/kids)
+- Club LaFair: pool feature + 6 facility editorial rows, membership CTA
+- Gallery: 7 filter categories, masonry, lightbox w/ keyboard nav (Esc/arrows), counter
+- Contact: validated form w/ success confirmation, info panels, hours, map, quick-action bar
+- Floating WhatsApp (wa.me/918380039333) + scroll-to-top on all pages
+- Per-page SEO titles/descriptions via usePageMeta
+
+## Known Notes
+- lucide-react MUST stay at 0.516.0 (v1 removed Instagram/Facebook brand icons)
+- Framer `whileInView` nested inside motion parents proved unreliable → all reveals use `useInView` + `animate` pattern
+- useInView margins must be vertical-only (`0px 0px -Npx 0px`) — all-side negative margins break IO near screen edges on mobile
+- Playwright testing: use `page.mouse.wheel` (Lenis ignores window.scrollTo); screenshot_tool scripts must be top-level statements
+- Forms are MOCKED (client-side success only, no data persisted)
+- Instagram/Facebook links point to assumed handles (@blvdnashik)
+
+## Backlog / P1-P2
+- P1: Wire contact/enquiry forms to backend or email service (Resend)
+- P1: Real property photography swap-in when available
+- P2: Menus (PDF/pages) for dining venues; virtual tour; multi-language (Marathi/Hindi)
+- P2: Lighthouse fine-tuning (preload hero image, font-display swap already via Google Fonts)
